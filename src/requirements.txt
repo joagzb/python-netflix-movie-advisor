@@ -1,6 +1,12 @@
 python-dotenv
 mysqlclient
 sqlalchemy
-pandas
 pymongo[srv]
 openpyxl
+numpy
+pandas
+seaborn
+matplotlib
+ydata-profiling
+scikit-learn
+ipywidgets
