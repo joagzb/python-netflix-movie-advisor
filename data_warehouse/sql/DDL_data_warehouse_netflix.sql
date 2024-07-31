@@ -4,7 +4,7 @@ USE dw_netflix;
 
 /* Create the table dimMovie */
 CREATE TABLE dimMovie (
-    movieID VARCHAR(8) PRIMARY KEY,
+    movieID VARCHAR(32) PRIMARY KEY,
     title VARCHAR(100) NOT NULL,
     releaseDate DATE,
     genre VARCHAR(100),

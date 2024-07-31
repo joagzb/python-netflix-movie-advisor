@@ -1,0 +1,12 @@
+python-dotenv
+mysqlclient
+sqlalchemy
+pymongo[srv]
+openpyxl
+numpy
+pandas
+seaborn
+matplotlib
+ydata-profiling
+scikit-learn
+ipywidgets
