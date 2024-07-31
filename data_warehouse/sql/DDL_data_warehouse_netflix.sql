@@ -51,7 +51,7 @@ CREATE TABLE dimScore (
 CREATE TABLE FactWatchs (
     id INTEGER PRIMARY KEY,
     userID INTEGER,
-    movieID VARCHAR(8),
+    movieID VARCHAR(32),
     performerID INTEGER,
     interactionID INTEGER,
     scoreID INTEGER,

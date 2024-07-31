@@ -1,6 +1,6 @@
 /* CREATE TABLE Movie */
 CREATE TABLE Movie (
-    movieID VARCHAR(8) PRIMARY KEY NOT NULL,
+    movieID VARCHAR(32) PRIMARY KEY NOT NULL,
     movieTitle VARCHAR(100) NOT NULL,
     releaseDate DATE NOT NULL,
     originalLanguage VARCHAR(100) DEFAULT NULL,
@@ -23,7 +23,7 @@ CREATE TABLE Person (
 /* CREATE TABLE Performer */
 CREATE TABLE Performer (
     performerID VARCHAR(8) PRIMARY KEY NOT NULL,
-    movieID VARCHAR(8) NOT NULL,
+    movieID VARCHAR(32) NOT NULL,
     personID VARCHAR(8),
     performerRole VARCHAR(30),
     CONSTRAINT fk_movie_performer FOREIGN KEY (movieID) REFERENCES Movie (movieID),
@@ -33,7 +33,7 @@ CREATE TABLE Performer (
 /* CREATE TABLE Movie_Genre */
 CREATE TABLE Movie_Genre (
     movieGenreID VARCHAR(8) PRIMARY KEY NOT NULL,
-    movieID VARCHAR(8) NOT NULL,
+    movieID VARCHAR(32) NOT NULL,
     genreID INTEGER,
     CONSTRAINT fk_movie_genre_movie FOREIGN KEY (movieID) REFERENCES Movie (movieID),
     CONSTRAINT fk_movie_genre_genre FOREIGN KEY (genreID) REFERENCES Genre (genreID)

@@ -69,7 +69,7 @@ Before running the project, ensure you have the following tools and libraries in
 To train the KMeans model and save the results, execute the following command:
 
 ```bash
-python src/train_model.py
+python src/training.py
 ```
 
 This command will:

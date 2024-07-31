@@ -1,5 +1,6 @@
 from dotenv import load_dotenv
 import os
+import sys
 load_dotenv()
 
 class Config:
@@ -9,4 +10,4 @@ class Config:
     MYSQL_PORT = os.getenv('MYSQL_PORT')
     MYSQL_DATABASE_DW = os.getenv('MYSQL_DATABASE_DW')
     MYSQL_DATABASE_OLTP = os.getenv('MYSQL_DATABASE_OLTP')
-    TRAINED_MODEL_PATH = "advisor_service/models"
+    TRAINED_MODEL_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), '../models'))
