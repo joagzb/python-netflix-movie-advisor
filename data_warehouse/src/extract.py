@@ -1,5 +1,7 @@
-import pandas as pd
 import os
+
+import pandas as pd
+
 from configuration.config import Config
 from db_connection import connect_to_mongo, connect_to_mysql
 
@@ -26,7 +28,7 @@ def extract_OLTP():
 
 def extract_mongo_data(collection_name):
     client = connect_to_mongo()
-    db = client['netflix_movies']
+    db = client[Config.MONGODB_DATABASE]
     collection = db[collection_name]
     documents = list(collection.find())
     return pd.DataFrame(documents)
