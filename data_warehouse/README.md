@@ -41,6 +41,11 @@ Before running this project, ensure you have the following tools and libraries i
    MONGODB_CLUSTER_NAME=your_mongodb_cluster_name
    ```
 
+4. **(Optional) Run the test suite** to verify your environment:
+   ```bash
+   pytest
+   ```
+
 ## Repository Structure
 
 ```plaintext
