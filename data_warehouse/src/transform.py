@@ -25,21 +25,20 @@ def transform_excel_data(df_movies,df_recommendations):
   df_movie_scores['recommendations'] = df_movie_scores['name'].map(df_recommendations['movie'].value_counts())
   df_movie_scores['score'] = df_movie_scores['recommendations'].apply(lambda x: assign_score(total_recommendations_by_movie.quantile(0.75), total_recommendations_by_movie.median(), x))
 
-  df_movie_scores= df_movie_scores[['name', 'score']].rename(columns={
-    'name': 'title',
-    'calculated_score': 'peopleScore'
+  df_movie_scores = df_movie_scores[["name", "score"]].rename(columns={
+    "name": "title",
+    "score": "peopleScore",
   })
-  df_movie_scores['netflixScore'] = None
-  df_movie_scores['imdbScore'] = None
-  df_movie_scores['rottentomatoesScore'] = None
-  df_movie_scores['sensacineScore'] = None
-  df_movie_scores['peopleComment'] = df_movie_scores['score'].apply(lambda x: generate_comment(x))
+  df_movie_scores["netflixScore"] = None
+  df_movie_scores["imdbScore"] = None
+  df_movie_scores["rottentomatoesScore"] = None
+  df_movie_scores["sensacineScore"] = None
+  df_movie_scores["peopleComment"] = df_movie_scores["peopleScore"].apply(lambda x: generate_comment(x))
 
   #prepare dimScore DataFrame
   df_dim_score = df_movie_scores.copy()
-  df_dim_score.drop(columns=['title'], inplace=True)
-  df_dim_score.rename(columns={'score': "peopleScore"}, inplace=True)
-  df_dim_score = df_dim_score.reset_index(names='scoreID')
+  df_dim_score.drop(columns=["title"], inplace=True)
+  df_dim_score = df_dim_score.reset_index(names="scoreID")
 
   # Apply the function to generate interaction data for each recommendation
   interactions_data = df_recommendations.apply(generate_interaction_data, axis=1)
