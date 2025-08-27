@@ -9,7 +9,7 @@ def connect_to_mysql(database):
     password = Config.MYSQL_PASSWORD
     host = Config.MYSQL_HOST
     port = Config.MYSQL_PORT
-    uri = f"mysql://{username}:{password}@{host}/{database}"
+    uri = f"mysql://{username}:{password}@{host}:{port}/{database}"
     print(uri)
     return db.create_engine(uri)
 
