@@ -58,7 +58,7 @@ Before running the project, ensure you have the following tools and libraries in
    MYSQL_USER=your_mysql_user
    MYSQL_PASSWORD=your_mysql_password
    MYSQL_HOST=your_mysql_host
-   MYSQL_PORT=your_mysql_port
+   MYSQL_PORT=3306  # Default MySQL port
    MYSQL_DATABASE_DW=your_mysql_dw_database
    ```
 
