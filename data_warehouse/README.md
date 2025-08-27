@@ -34,12 +34,13 @@ Before running this project, ensure you have the following tools and libraries i
    MYSQL_DATABASE_DW=your_mysql_dw_database
    MYSQL_DATABASE_OLTP=your_mysql_oltp_database
 
-   # MongoDB Configuration
-   MONGODB_USERNAME=your_mongodb_username
-   MONGODB_PASSWORD=your_mongodb_password
-   MONGODB_HOST=your_mongodb_host
-   MONGODB_CLUSTER_NAME=your_mongodb_cluster_name
-   ```
+    # MongoDB Configuration
+    MONGODB_USERNAME=your_mongodb_username
+    MONGODB_PASSWORD=your_mongodb_password
+    MONGODB_HOST=your_mongodb_host
+    MONGODB_CLUSTER_NAME=your_mongodb_cluster_name
+    MONGODB_DATABASE=your_mongodb_database
+    ```
 
 ## Repository Structure
 
