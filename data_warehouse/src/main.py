@@ -14,7 +14,12 @@ from extract import (
     extract_mongo_interactions,
     extract_mongo_movies,
 )
-from src.load import load_data, load_dim_tables, prepare_fact_watchs_excel, prepare_fact_watchs_mongo
+from load import (
+    load_data,
+    load_dim_tables,
+    prepare_fact_watchs_excel,
+    prepare_fact_watchs_mongo,
+)
 
 
 def etl_excel():

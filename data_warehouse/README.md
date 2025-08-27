@@ -78,6 +78,11 @@ data_warehouse/
 - `requirements.txt`: List of required Python libraries.
 - `README.md`: Project documentation.
 
+The `src` directory is a proper Python package (it includes an `__init__.py` file),
+which allows modules inside it to be imported directly without using `src.`
+prefixes. Ensure you execute commands from the `data_warehouse` directory so
+these imports resolve correctly.
+
 ## Running the ETL Process
 
 To run the ETL process, execute the following command:
